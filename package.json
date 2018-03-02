@@ -1,0 +1,24 @@
+{
+  "name": "auction-sim",
+  "version": "1.0.0",
+  "description": "This is an application made for the ACIT 2520 final project in the Winter term of 2018.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightwisper/ACIT-2520-Final-Project.git"
+  },
+  "author": "Lucas Silva, Bhavia Shah, Erik",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nightwisper/ACIT-2520-Final-Project/issues"
+  },
+  "homepage": "https://github.com/nightwisper/ACIT-2520-Final-Project#readme"
+}
