@@ -1,8 +1,8 @@
 const { Pool } = require('pg');
-const config = require('./config.js');
+const fs       = require('fs');
+const config   = require('../../config-files/db-config.json');
 
-const pool = new Pool();
-
+const pool = new Pool(config);
 
 module.exports = {
   query: (sql, params) => {
