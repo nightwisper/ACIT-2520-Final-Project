@@ -1,7 +1,10 @@
 # Config Files
 /config-files/
 
-# Logs
+# Bundles
+/pages/bundle/
+
+# Logsw
 logs
 *.log
 npm-debug.log*
