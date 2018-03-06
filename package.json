@@ -10,8 +10,10 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start":"node app.js",
     "config-db": "bash ./launch-scripts/db_config.sh",
-    "test": "bash ./launch-scripts/tests.sh"
+    "test": "bash ./launch-scripts/test.sh",
+    "test-db": "bash ./launch-scripts/test-db.sh"
   },
   "repository": {
     "type": "git",

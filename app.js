@@ -25,6 +25,7 @@ app.get('/', (req, resp) => {
 app.post('/listings/getListings', (req, resp) => {
   console.log("Attempt to retrive listings");
 })
+
 app.listen(PORT, () => {
   console.log(`Application running on port ${PORT}.`);
 })
