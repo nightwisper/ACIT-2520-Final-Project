@@ -2,6 +2,9 @@
 ---
 Module for executing PostgreSQL database queries.
 
+### Dependencies
+* PostgreSQL
+* pg
 
 ### File Structure
 ```fs
