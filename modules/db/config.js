@@ -1,8 +1,18 @@
+/*
+ * config.js
+ *
+ * Creates configuration file on location ./config-files/db-config.json
+ *
+ * @Author: Lucas Silva
+ */
+
 console.log('Writting config file');
 
+// IMPORTS
 const fs = require('fs');
 const yargs = require('yargs');
 
+// setting up yargs for CLI calls
 const argv = yargs
   .options({
     d: {
@@ -26,12 +36,14 @@ const argv = yargs
   })
   .help().argv;
 
+// preps config object
 const config = {
   user:argv.username || process.env.USER,
   password:argv.password,
-  database:argv.db
+  database:argv.db || process.env.DATABASE_URL
 };
 
+// writes config to file
 fs.writeFile('./config-files/db-config.json', JSON.stringify(config, null, 4), (err) => {
   if(err){
     console.log(err);
