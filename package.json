@@ -15,18 +15,18 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "webpack": "^4.1.0",
-    "yargs": "^11.0.0"
+    "yargs": "^11.1.0"
   },
   "devDependencies": {
     "postcss-loader": "^2.1.1",
     "webpack-cli": "^2.0.10"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js | tee -a logs/runtime.log",
     "config-db": "bash ./launch-scripts/db_config.sh",
-    "test": "bash ./launch-scripts/test.sh",
-    "test-db": "bash ./launch-scripts/test-db.sh",
-    "test-encrypt": "bash ./launch-scripts/test-encryption.sh"
+    "test": "bash ./launch-scripts/test.sh | tee -a logs/tests.log",
+    "test-db": "bash ./launch-scripts/test-db.sh | tee -a logs/test-db.log",
+    "test-encrypt": "bash ./launch-scripts/test-encryption.sh | tee -a logs/test-encrypt.log"
   },
   "repository": {
     "type": "git",

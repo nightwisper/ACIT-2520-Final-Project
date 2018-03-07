@@ -41,7 +41,7 @@ fs.access('./config-files/db-config.json', (err) => {
   });
 
   // Tests if able to read from table listings
-  db.query('select * from listins').then((result) => {
+  db.query('select * from listings').then((result) => {
     console.log('Read from table listins was successful.');
     passed +=1;
   }, (err) => {
@@ -54,4 +54,4 @@ fs.access('./config-files/db-config.json', (err) => {
 setInterval(()=>{
   console.log(`\n${passed} tests passed. ${errors} errors.\n`);
   process.exit();
-}, 100);
+}, 200);

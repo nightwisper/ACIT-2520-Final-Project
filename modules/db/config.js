@@ -6,7 +6,7 @@
  * @Author: Lucas Silva
  */
 
-console.log('Writting config file');
+console.log('Writing config file');
 
 // IMPORTS
 const fs = require('fs');
@@ -43,7 +43,18 @@ const config = {
   database:argv.db || process.env.DATABASE_URL
 };
 
-// writes config to file
+// Creates a config directory if one is not already existant
+fs.stat('./config-files/', (err, stat) => {
+  if(err){
+    fs.mkdir('./config-files/', (err) => {
+      if(err){
+        console.log(err);
+        return false;
+      }
+    });
+  }
+});
+
 fs.writeFile('./config-files/db-config.json', JSON.stringify(config, null, 4), (err) => {
   if(err){
     console.log(err);

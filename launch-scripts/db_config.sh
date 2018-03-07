@@ -13,3 +13,9 @@ echo /config-files/db-config.json
 echo
 
 cat config-files/db-config.json
+
+echo
+echo
+echo To finish setup please run:
+echo -e '\tpsql -U $user -f ./launch-scripts/database.sql'
+echo
