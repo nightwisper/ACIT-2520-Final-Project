@@ -5,6 +5,7 @@ var PORT = 8080 || process.env.PORT;
 
 // External Library Imports //
 const express = require('express');
+const session = require('express-session');
 const path = require('path');
 
 // Custom Library Imports //
@@ -14,7 +15,13 @@ var app = express();
 
 var src = path.resolve(__dirname, "pages/bundle");
 
-app.use('/src', express.static(src))
+app.use('/src', express.static(src));
+
+app.use(session({
+  secret: 'Keyboard Cat',
+  resave:true,
+  saveUninitialized: true
+}));
 
 app.use('/', router);
 
