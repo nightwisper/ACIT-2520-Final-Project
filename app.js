@@ -10,10 +10,13 @@ const path = require('path');
 
 // Custom Library Imports //
 const router = require('./lib/router');
+const hbs = require('./lib/handlebars');
 
 var app = express();
 
 var src = path.resolve(__dirname, "pages/bundle");
+
+app.set('view engine', 'hbs');
 
 app.use('/src', express.static(src));
 
