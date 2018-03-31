@@ -22,9 +22,15 @@ app.use('/src', express.static(src));
 
 app.use(session({
   secret: 'Keyboard Cat',
-  resave:true,
+  resave: true,
   saveUninitialized: true
 }));
+
+app.use(function(req, res, next) {
+  res.locals.session = req.session;
+  console.log(res.locals.session);
+  next();
+});
 
 app.use('/', router);
 
