@@ -25,7 +25,8 @@
     "webpack-cli": "^2.0.10"
   },
   "scripts": {
-    "start": "webpack; node app.js | tee -a logs/runtime.log",
+    "start": "node app.js | tee -a logs/runtime.log",
+    "start-webpack": "webpack | tee -a logs/runtime.log; node app.js | tee -a logs/runtime.log",
     "config-db": "bash ./launch-scripts/db_config.sh",
     "test": "bash ./launch-scripts/test.sh | tee -a logs/tests.log",
     "test-db": "bash ./launch-scripts/test-db.sh | tee -a logs/test-db.log",
