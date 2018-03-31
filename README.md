@@ -13,5 +13,5 @@ The following command will take you through the connection setup to the PostgreS
 ```sh
 npm run config-db
 ```
-this is a test
+
 
