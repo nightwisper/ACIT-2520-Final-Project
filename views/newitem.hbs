@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title> Auction Registration Page></title>
+  <title> New Item Listing Page></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -21,50 +20,49 @@
         <br>
         <br>
         <br>
+
         <div class="row centered-form">
           <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">Auction Registration Form 
+                <h3 class="panel-title">New Item Form 
                 </h3>
               </div>
 
               <div class="panel-body">
-                <form role="form" onsubmit="{{registerUser}}">
+                <form role="form" onsubmit="{{createListing}}">
                   <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6">
                       <div class="form-group">
-                        <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+                        <input type="text" name="item_name" id="item_name" class="form-control input-sm" placeholder="Item Name">
                       </div>
                     </div>
 
                     <div class="col-xs-6 col-sm-6 col-md-6">
                       <div class="form-group">
-                        <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+                        <input type="text" name="item_description" id="item_description" class="form-control input-sm" placeholder="Item Description">
                       </div>
                     </div>
 
+                    
+
                   </div>
 
-                  <div class="form-group">
-
-                    <input type="email" name="email" id="email" class="form-control input-sm" placeholder="E-mail Address">
-                  </div>
-
+                 
                 <div class="row">
                   <div class="col-xs-6 col-sm-6 col-ms-6">
                     <div class="form-group">
-                      <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                      <input type="text" name="price" id="price" class="form-control input-sm" placeholder="Price">
                     </div>
                   </div>
 
                   <div class="col-xs-6 col-sm-6 col-ms-6">
                     <div class="form-group">
-                      <input type="password" name="re-password" id="re-password" class="form-control input-sm" placeholder="Re-type Password">
+                      <input type="text" name="min-bid" id="min-bid" class="form-control input-sm" placeholder="Min Bid Increase">
                     </div>
                   </div>
                 </div>
-                <input type="submit" value="Register" class="btn btn-info btn-block">
+                <input type="submit" value="Submit Item" class="btn btn-info btn-block">
                 </form>
               </div>
             </div>
